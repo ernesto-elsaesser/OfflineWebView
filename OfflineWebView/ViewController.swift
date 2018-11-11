@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var loadingView: UIView!
     
-    let homepageURL = URL(string: "https://bugs.webkit.org")!
+    let homepageURL = URL(string: "https://nshipster.com/wkwebview")!
     var archiveURL: URL!
     
     override func viewDidLoad() {
