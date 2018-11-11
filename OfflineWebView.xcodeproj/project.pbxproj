@@ -1,0 +1,404 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E54EE05240ADCEF301F718C /* Pods_OfflineWebView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961165ACCD89680C452E3140 /* Pods_OfflineWebView.framework */; };
+		94E40EA42195C7CE002A130A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E40EA32195C7CE002A130A /* AppDelegate.swift */; };
+		94E40EA62195C7CE002A130A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E40EA52195C7CE002A130A /* ViewController.swift */; };
+		94E40EA92195C7CE002A130A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94E40EA72195C7CE002A130A /* Main.storyboard */; };
+		94E40EAB2195C7D0002A130A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94E40EAA2195C7D0002A130A /* Assets.xcassets */; };
+		94F46DF72197BF4C0025DE10 /* WebArchiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F46DF62197BF4B0025DE10 /* WebArchiver.swift */; };
+		94F46DF921988BB80025DE10 /* WebArchive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F46DF821988BB80025DE10 /* WebArchive.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2939E9241B9B946A6CE1FA8D /* Pods-OfflineWebView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfflineWebView.release.xcconfig"; path = "Pods/Target Support Files/Pods-OfflineWebView/Pods-OfflineWebView.release.xcconfig"; sourceTree = "<group>"; };
+		94E40EA02195C7CE002A130A /* OfflineWebView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OfflineWebView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		94E40EA32195C7CE002A130A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		94E40EA52195C7CE002A130A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		94E40EA82195C7CE002A130A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		94E40EAA2195C7D0002A130A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		94E40EAF2195C7D0002A130A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94F46DF62197BF4B0025DE10 /* WebArchiver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebArchiver.swift; sourceTree = "<group>"; };
+		94F46DF821988BB80025DE10 /* WebArchive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebArchive.swift; sourceTree = "<group>"; };
+		961165ACCD89680C452E3140 /* Pods_OfflineWebView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OfflineWebView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2F1062490E57605B28FEC63 /* Pods-OfflineWebView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfflineWebView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OfflineWebView/Pods-OfflineWebView.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		94E40E9D2195C7CE002A130A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E54EE05240ADCEF301F718C /* Pods_OfflineWebView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8931EBF3595335C4E6AC9E5D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				961165ACCD89680C452E3140 /* Pods_OfflineWebView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		94E40E972195C7CE002A130A = {
+			isa = PBXGroup;
+			children = (
+				94E40EA22195C7CE002A130A /* OfflineWebView */,
+				94E40EA12195C7CE002A130A /* Products */,
+				8931EBF3595335C4E6AC9E5D /* Frameworks */,
+				FF5C96F7AC2817862D68FD48 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		94E40EA12195C7CE002A130A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				94E40EA02195C7CE002A130A /* OfflineWebView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		94E40EA22195C7CE002A130A /* OfflineWebView */ = {
+			isa = PBXGroup;
+			children = (
+				94E40EA32195C7CE002A130A /* AppDelegate.swift */,
+				94E40EA52195C7CE002A130A /* ViewController.swift */,
+				94F46DF821988BB80025DE10 /* WebArchive.swift */,
+				94F46DF62197BF4B0025DE10 /* WebArchiver.swift */,
+				94E40EA72195C7CE002A130A /* Main.storyboard */,
+				94E40EAA2195C7D0002A130A /* Assets.xcassets */,
+				94E40EAF2195C7D0002A130A /* Info.plist */,
+			);
+			path = OfflineWebView;
+			sourceTree = "<group>";
+		};
+		FF5C96F7AC2817862D68FD48 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E2F1062490E57605B28FEC63 /* Pods-OfflineWebView.debug.xcconfig */,
+				2939E9241B9B946A6CE1FA8D /* Pods-OfflineWebView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		94E40E9F2195C7CE002A130A /* OfflineWebView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94E40EB22195C7D0002A130A /* Build configuration list for PBXNativeTarget "OfflineWebView" */;
+			buildPhases = (
+				7F027B5FF70F3CB06AA409D4 /* [CP] Check Pods Manifest.lock */,
+				94E40E9C2195C7CE002A130A /* Sources */,
+				94E40E9D2195C7CE002A130A /* Frameworks */,
+				94E40E9E2195C7CE002A130A /* Resources */,
+				CD7151335420FAD814FBE05A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OfflineWebView;
+			productName = OfflineWebView;
+			productReference = 94E40EA02195C7CE002A130A /* OfflineWebView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		94E40E982195C7CE002A130A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Ernesto Elsäßer";
+				TargetAttributes = {
+					94E40E9F2195C7CE002A130A = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 94E40E9B2195C7CE002A130A /* Build configuration list for PBXProject "OfflineWebView" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 94E40E972195C7CE002A130A;
+			productRefGroup = 94E40EA12195C7CE002A130A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				94E40E9F2195C7CE002A130A /* OfflineWebView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		94E40E9E2195C7CE002A130A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94E40EAB2195C7D0002A130A /* Assets.xcassets in Resources */,
+				94E40EA92195C7CE002A130A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7F027B5FF70F3CB06AA409D4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OfflineWebView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD7151335420FAD814FBE05A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OfflineWebView/Pods-OfflineWebView-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Fuzi/Fuzi.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Fuzi.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OfflineWebView/Pods-OfflineWebView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		94E40E9C2195C7CE002A130A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94E40EA62195C7CE002A130A /* ViewController.swift in Sources */,
+				94E40EA42195C7CE002A130A /* AppDelegate.swift in Sources */,
+				94F46DF72197BF4C0025DE10 /* WebArchiver.swift in Sources */,
+				94F46DF921988BB80025DE10 /* WebArchive.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		94E40EA72195C7CE002A130A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				94E40EA82195C7CE002A130A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		94E40EB02195C7D0002A130A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		94E40EB12195C7D0002A130A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		94E40EB32195C7D0002A130A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2F1062490E57605B28FEC63 /* Pods-OfflineWebView.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NS758RRF78;
+				INFOPLIST_FILE = OfflineWebView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.elsaesser.OfflineBrowser;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		94E40EB42195C7D0002A130A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2939E9241B9B946A6CE1FA8D /* Pods-OfflineWebView.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NS758RRF78;
+				INFOPLIST_FILE = OfflineWebView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.elsaesser.OfflineBrowser;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		94E40E9B2195C7CE002A130A /* Build configuration list for PBXProject "OfflineWebView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94E40EB02195C7D0002A130A /* Debug */,
+				94E40EB12195C7D0002A130A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94E40EB22195C7D0002A130A /* Build configuration list for PBXNativeTarget "OfflineWebView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94E40EB32195C7D0002A130A /* Debug */,
+				94E40EB42195C7D0002A130A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 94E40E982195C7CE002A130A /* Project object */;
+}
