@@ -11,14 +11,18 @@ import WebKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var webViewContainer: UIView!
     @IBOutlet weak var loadingView: UIView!
     
+    var webView: WKWebView!
     let homepageURL = URL(string: "https://nshipster.com/wkwebview")!
     var archiveURL: URL!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.webView = WKWebView(frame: webViewContainer.bounds)
+        webViewContainer.addSubview(self.webView)
         
         self.archiveURL = try! FileManager.default.url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
             .appendingPathComponent("cached").appendingPathExtension("webarchive")
