@@ -21,10 +21,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.webView = WKWebView(frame: webViewContainer.bounds)
-        webViewContainer.addSubview(self.webView)
+        webView = WKWebView(frame: webViewContainer.bounds)
+        webViewContainer.addSubview(webView)
         
-        self.archiveURL = try! FileManager.default.url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+        archiveURL = try! FileManager.default.url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
             .appendingPathComponent("cached").appendingPathExtension("webarchive")
         
         webView.navigationDelegate = self
