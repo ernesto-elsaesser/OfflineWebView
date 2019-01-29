@@ -8,6 +8,7 @@
 
 import UIKit
 import WebKit
+import WebArchiver
 
 class ViewController: UIViewController {
 
