@@ -50,16 +50,15 @@ class ViewController: UIViewController {
             
             self.loadingView.isHidden = true
             
-            switch result {
-            case .success(let plistData):
+            if let data = result.plistData {
                 do {
-                    try plistData.write(to: self.archiveURL)
+                    try data.write(to: self.archiveURL)
                     self.popup("Web page successfully archived!", isError: false)
                 } catch {
                     self.popup("Failed to write archive to disk!", isError: true)
                 }
-            case .failure(let error):
-                self.popup(error.localizedDescription, isError: true)
+            } else if let firstError = result.errors.first {
+                self.popup(firstError.localizedDescription, isError: true)
             }
         }
     }

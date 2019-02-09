@@ -9,19 +9,19 @@
 import Foundation
 import Fuzi
 
-enum ArchivingResult {
-    case success(plistData: Data)
-    case failure(error: Error)
+public struct ArchivingResult {
+    public let plistData: Data?
+    public let errors: [Error]
 }
 
-enum ArchivingError: LocalizedError {
+public enum ArchivingError: LocalizedError {
     case unsupportedUrl
     case requestFailed(resource: URL, error: Error)
     case invalidResponse(resource: URL)
     case unsupportedEncoding
     case invalidReferenceUrl(string: String)
     
-    var errorDescription: String? {
+    public var errorDescription: String? {
         switch self {
         case .unsupportedUrl: return "Unsupported URL"
         case .requestFailed(let res, _): return "Failed to load " + res.absoluteString
@@ -32,102 +32,27 @@ enum ArchivingError: LocalizedError {
     }
 }
 
-private class ArchivingSession {
-    private let urlSession: URLSession
-    private let completion: (ArchivingResult) -> ()
-    private var lastError: Error? = nil
-    private var pendingTaskCount: Int = 0 // TODO: use urlSession.delegateQueue.operationCount?
-    
-    init(completion: @escaping (ArchivingResult) -> ()) {
-        let sessionQueue = OperationQueue()
-        sessionQueue.maxConcurrentOperationCount = 1
-        sessionQueue.name = "WebArchiverWorkQueue"
-        self.urlSession = URLSession(configuration: .default, delegate: nil, delegateQueue: sessionQueue)
-        self.completion = completion
-    }
-    
-    func load(url: URL, resourceHandler: @escaping (WebArchiveResource) throws -> WebArchive ) {
-        pendingTaskCount = pendingTaskCount + 1
-        let task = urlSession.dataTask(with: url) { (data, response, error) in
-            self.pendingTaskCount = self.pendingTaskCount - 1
-            
-            if let error = error {
-                self.onError(ArchivingError.requestFailed(resource: url, error: error))
-                return
-            }
-            
-            guard let data = data, let mimeType = (response as? HTTPURLResponse)?.mimeType else {
-                self.onError(ArchivingError.invalidResponse(resource: url))
-                return
-            }
-            
-            let resource = WebArchiveResource(url: url, data: data, mimeType: mimeType)
-            do {
-                let newArchive = try resourceHandler(resource)
-                self.onSuccess(newArchive)
-            } catch {
-                self.onError(error)
-            }
-        }
-        task.resume()
-    }
-    
-    private func onError(_ error: Error) {
-        if pendingTaskCount == 0 {
-            returnOnMain(result: .failure(error: error))
-        } else {
-            lastError = error
-        }
-    }
-    
-    private func onSuccess(_ archive: WebArchive) {
-        
-        guard self.pendingTaskCount == 0 else {
-            return
-        }
-        
-        if let error = lastError {
-            returnOnMain(result: .failure(error: error))
-            return
-        }
-        
-        let encoder = PropertyListEncoder()
-        encoder.outputFormat = .binary
-        
-        do {
-            let data = try encoder.encode(archive)
-            returnOnMain(result: .success(plistData: data))
-        } catch {
-            returnOnMain(result: .failure(error: error))
-        }
-    }
-    
-    private func returnOnMain(result: ArchivingResult) {
-        DispatchQueue.main.async {
-            self.completion(result)
-        }
-    }
-}
-
 public class WebArchiver {
     
-    static func archive(url: URL, includeJavascript: Bool = true, completion: @escaping (ArchivingResult) -> ()) {
+    public static func archive(url: URL, includeJavascript: Bool = true, skipCache: Bool = false, completion: @escaping (ArchivingResult) -> ()) {
         
         guard let scheme = url.scheme, scheme == "https" else {
-            completion(.failure(error: ArchivingError.unsupportedUrl))
+            let result = ArchivingResult(plistData: nil, errors: [ArchivingError.unsupportedUrl])
+            completion(result)
             return
         }
         
-        let session = ArchivingSession(completion: completion)
+        let cachePolicy: URLRequest.CachePolicy = skipCache ? .reloadIgnoringLocalAndRemoteCacheData : .returnCacheDataElseLoad
+        let session = ArchivingSession(cachePolicy: cachePolicy, completion: completion)
         
-        session.load(url: url) { mainResource in
+        session.load(url: url, fallback: nil) { mainResource in
             
             var archive = WebArchive(resource: mainResource)
             
             let references = try self.extractHTMLReferences(from: mainResource, includeJavascript: includeJavascript)
             for reference in references {
                 
-                session.load(url: reference) { resource in
+                session.load(url: reference, fallback: archive) { resource in
                     
                     archive.addSubresource(resource)
                     
@@ -136,7 +61,7 @@ public class WebArchiver {
                         let cssReferences = try self.extractCSSReferences(from: resource)
                         for cssReference in cssReferences {
                             
-                            session.load(url: cssReference) { cssResource in
+                            session.load(url: cssReference, fallback: archive) { cssResource in
                                 
                                 archive.addSubresource(cssResource)
                                 return archive
@@ -189,5 +114,76 @@ public class WebArchiver {
     private static func absoluteUniqueUrls(references: [String], resource: WebArchiveResource) -> Set<URL> {
         let absoluteReferences = references.compactMap { URL(string: $0, relativeTo: resource.url) }
         return Set(absoluteReferences)
+    }
+}
+
+private class ArchivingSession {
+    
+    static var encoder: PropertyListEncoder = {
+        let plistEncoder = PropertyListEncoder()
+        plistEncoder.outputFormat = .binary
+        return plistEncoder
+    }()
+    
+    private let urlSession: URLSession
+    private let completion: (ArchivingResult) -> ()
+    private let cachePolicy: URLRequest.CachePolicy
+    private var errors: [Error] = []
+    private var pendingTaskCount: Int = 0 // TODO: use urlSession.delegateQueue.operationCount?
+    
+    init(cachePolicy: URLRequest.CachePolicy, completion: @escaping (ArchivingResult) -> ()) {
+        let sessionQueue = OperationQueue()
+        sessionQueue.maxConcurrentOperationCount = 1
+        sessionQueue.name = "WebArchiverWorkQueue"
+        self.urlSession = URLSession(configuration: .default, delegate: nil, delegateQueue: sessionQueue)
+        self.cachePolicy = cachePolicy
+        self.completion = completion
+    }
+    
+    func load(url: URL, fallback: WebArchive?, expand: @escaping (WebArchiveResource) throws -> WebArchive ) {
+        pendingTaskCount = pendingTaskCount + 1
+        var request = URLRequest(url: url)
+        request.cachePolicy = cachePolicy
+        let task = urlSession.dataTask(with: request) { (data, response, error) in
+            self.pendingTaskCount = self.pendingTaskCount - 1
+            
+            var archive = fallback
+            if let error = error {
+                self.errors.append(ArchivingError.requestFailed(resource: url, error: error))
+            } else if let data = data, let mimeType = (response as? HTTPURLResponse)?.mimeType {
+                let resource = WebArchiveResource(url: url, data: data, mimeType: mimeType)
+                do {
+                    archive = try expand(resource)
+                } catch {
+                    self.errors.append(error)
+                }
+            } else {
+                self.errors.append(ArchivingError.invalidResponse(resource: url))
+            }
+            
+            self.finish(with: archive)
+        }
+        task.resume()
+    }
+    
+    private func finish(with archive: WebArchive?) {
+        
+        guard self.pendingTaskCount == 0 else {
+            return
+        }
+        
+        var plistData: Data?
+        if let archive = archive {
+            do {
+                plistData = try ArchivingSession.encoder.encode(archive)
+            } catch {
+                errors.append(error)
+            }
+        }
+        
+        let result = ArchivingResult(plistData: plistData, errors: errors)
+        DispatchQueue.main.async {
+            self.completion(result)
+        }
     }
 }
