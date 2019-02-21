@@ -231,7 +231,6 @@
 				94F965E321FFDA96008550FD /* Sources */,
 				94F965E421FFDA96008550FD /* Frameworks */,
 				94F965E521FFDA96008550FD /* Resources */,
-				0C1B1AF00A9EE80904B941D4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -311,24 +310,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0C1B1AF00A9EE80904B941D4 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-WebArchiverTests/Pods-WebArchiverTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Fuzi/Fuzi.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Fuzi.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WebArchiverTests/Pods-WebArchiverTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		7F027B5FF70F3CB06AA409D4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -371,7 +352,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-OfflineWebView/Pods-OfflineWebView-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-OfflineWebView/Pods-OfflineWebView-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Fuzi/Fuzi.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -380,7 +361,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OfflineWebView/Pods-OfflineWebView-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OfflineWebView/Pods-OfflineWebView-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CFCECDD61E13ED1A307C61B2 /* [CP] Check Pods Manifest.lock */ = {

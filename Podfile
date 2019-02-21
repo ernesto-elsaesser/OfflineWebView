@@ -4,6 +4,8 @@ platform :ios, '10.0'
 target 'OfflineWebView' do
   use_frameworks!
 
+  pod 'Fuzi'
+  
 end
 
 target 'WebArchiver' do
