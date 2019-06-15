@@ -34,7 +34,7 @@ public enum ArchivingError: LocalizedError {
 
 public class WebArchiver {
     
-    public static func archive(url: URL, includeJavascript: Bool = true, skipCache: Bool = false, completion: @escaping (ArchivingResult) -> ()) {
+    public static func archive(url: URL, cookies: [HTTPCookie] = [], includeJavascript: Bool = true, skipCache: Bool = false, completion: @escaping (ArchivingResult) -> ()) {
         
         guard let scheme = url.scheme, scheme == "https" else {
             let result = ArchivingResult(plistData: nil, errors: [ArchivingError.unsupportedUrl])
@@ -43,7 +43,7 @@ public class WebArchiver {
         }
         
         let cachePolicy: URLRequest.CachePolicy = skipCache ? .reloadIgnoringLocalAndRemoteCacheData : .returnCacheDataElseLoad
-        let session = ArchivingSession(cachePolicy: cachePolicy, completion: completion)
+        let session = ArchivingSession(cachePolicy: cachePolicy, cookies: cookies, completion: completion)
         
         session.load(url: url, fallback: nil) { mainResource in
             
@@ -114,76 +114,5 @@ public class WebArchiver {
     private static func absoluteUniqueUrls(references: [String], resource: WebArchiveResource) -> Set<URL> {
         let absoluteReferences = references.compactMap { URL(string: $0, relativeTo: resource.url) }
         return Set(absoluteReferences)
-    }
-}
-
-private class ArchivingSession {
-    
-    static var encoder: PropertyListEncoder = {
-        let plistEncoder = PropertyListEncoder()
-        plistEncoder.outputFormat = .binary
-        return plistEncoder
-    }()
-    
-    private let urlSession: URLSession
-    private let completion: (ArchivingResult) -> ()
-    private let cachePolicy: URLRequest.CachePolicy
-    private var errors: [Error] = []
-    private var pendingTaskCount: Int = 0 // TODO: use urlSession.delegateQueue.operationCount?
-    
-    init(cachePolicy: URLRequest.CachePolicy, completion: @escaping (ArchivingResult) -> ()) {
-        let sessionQueue = OperationQueue()
-        sessionQueue.maxConcurrentOperationCount = 1
-        sessionQueue.name = "WebArchiverWorkQueue"
-        self.urlSession = URLSession(configuration: .default, delegate: nil, delegateQueue: sessionQueue)
-        self.cachePolicy = cachePolicy
-        self.completion = completion
-    }
-    
-    func load(url: URL, fallback: WebArchive?, expand: @escaping (WebArchiveResource) throws -> WebArchive ) {
-        pendingTaskCount = pendingTaskCount + 1
-        var request = URLRequest(url: url)
-        request.cachePolicy = cachePolicy
-        let task = urlSession.dataTask(with: request) { (data, response, error) in
-            self.pendingTaskCount = self.pendingTaskCount - 1
-            
-            var archive = fallback
-            if let error = error {
-                self.errors.append(ArchivingError.requestFailed(resource: url, error: error))
-            } else if let data = data, let mimeType = (response as? HTTPURLResponse)?.mimeType {
-                let resource = WebArchiveResource(url: url, data: data, mimeType: mimeType)
-                do {
-                    archive = try expand(resource)
-                } catch {
-                    self.errors.append(error)
-                }
-            } else {
-                self.errors.append(ArchivingError.invalidResponse(resource: url))
-            }
-            
-            self.finish(with: archive)
-        }
-        task.resume()
-    }
-    
-    private func finish(with archive: WebArchive?) {
-        
-        guard self.pendingTaskCount == 0 else {
-            return
-        }
-        
-        var plistData: Data?
-        if let archive = archive {
-            do {
-                plistData = try ArchivingSession.encoder.encode(archive)
-            } catch {
-                errors.append(error)
-            }
-        }
-        
-        let result = ArchivingResult(plistData: plistData, errors: errors)
-        DispatchQueue.main.async {
-            self.completion(result)
-        }
     }
 }

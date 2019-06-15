@@ -46,19 +46,22 @@ class ViewController: UIViewController {
         
         loadingView.isHidden = false
         
-        WebArchiver.archive(url: url) { result in
+        webView.configuration.websiteDataStore.httpCookieStore.getAllCookies { cookies in
             
-            self.loadingView.isHidden = true
-            
-            if let data = result.plistData {
-                do {
-                    try data.write(to: self.archiveURL)
-                    self.popup("Web page successfully archived!", isError: false)
-                } catch {
-                    self.popup("Failed to write archive to disk!", isError: true)
+            WebArchiver.archive(url: url, cookies: cookies) { result in
+                
+                self.loadingView.isHidden = true
+                
+                if let data = result.plistData {
+                    do {
+                        try data.write(to: self.archiveURL)
+                        self.popup("Web page successfully archived!", isError: false)
+                    } catch {
+                        self.popup("Failed to write archive to disk!", isError: true)
+                    }
+                } else if let firstError = result.errors.first {
+                    self.popup(firstError.localizedDescription, isError: true)
                 }
-            } else if let firstError = result.errors.first {
-                self.popup(firstError.localizedDescription, isError: true)
             }
         }
     }

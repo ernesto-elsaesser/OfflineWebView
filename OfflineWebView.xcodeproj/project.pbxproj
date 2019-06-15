@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2E54EE05240ADCEF301F718C /* Pods_OfflineWebView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961165ACCD89680C452E3140 /* Pods_OfflineWebView.framework */; };
 		87DC114BED07C195F447F77D /* Pods_WebArchiverTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A692F1C8AC7C5E658786C8DC /* Pods_WebArchiverTests.framework */; };
 		884DF1958A6EAF8491E8E40D /* Pods_WebArchiver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C92A53B40A3BC72FB2FAD4B /* Pods_WebArchiver.framework */; };
+		94526A6D22B50436009012B9 /* ArchivingSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94526A6C22B50436009012B9 /* ArchivingSession.swift */; };
 		94E40EA42195C7CE002A130A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E40EA32195C7CE002A130A /* AppDelegate.swift */; };
 		94E40EA62195C7CE002A130A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E40EA52195C7CE002A130A /* ViewController.swift */; };
 		94E40EA92195C7CE002A130A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94E40EA72195C7CE002A130A /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		2975F646C35E0B77F535AACB /* Pods-WebArchiverTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebArchiverTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WebArchiverTests/Pods-WebArchiverTests.release.xcconfig"; sourceTree = "<group>"; };
 		2C92A53B40A3BC72FB2FAD4B /* Pods_WebArchiver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebArchiver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65785B8563B6038C400A2B51 /* Pods-WebArchiverTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebArchiverTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WebArchiverTests/Pods-WebArchiverTests.debug.xcconfig"; sourceTree = "<group>"; };
+		94526A6C22B50436009012B9 /* ArchivingSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchivingSession.swift; sourceTree = "<group>"; };
 		94E40EA02195C7CE002A130A /* OfflineWebView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OfflineWebView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94E40EA32195C7CE002A130A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94E40EA52195C7CE002A130A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			children = (
 				94F46DF821988BB80025DE10 /* WebArchive.swift */,
 				94F46DF62197BF4B0025DE10 /* WebArchiver.swift */,
+				94526A6C22B50436009012B9 /* ArchivingSession.swift */,
 				94F965E121FFDA96008550FD /* WebArchiver.h */,
 				94F965E221FFDA96008550FD /* Info.plist */,
 			);
@@ -351,13 +354,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-OfflineWebView/Pods-OfflineWebView-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Fuzi/Fuzi.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OfflineWebView/Pods-OfflineWebView-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Fuzi.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OfflineWebView/Pods-OfflineWebView-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -400,6 +402,7 @@
 			files = (
 				94F965F621FFDABC008550FD /* WebArchiver.swift in Sources */,
 				94F965F721FFDABC008550FD /* WebArchive.swift in Sources */,
+				94526A6D22B50436009012B9 /* ArchivingSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,7 +492,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -544,7 +547,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -606,7 +609,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = WebArchiver/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -636,7 +639,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = WebArchiver/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
