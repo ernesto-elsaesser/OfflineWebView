@@ -25,10 +25,18 @@ class ViewController: UIViewController {
         archiveURL = try! FileManager.default.url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
             .appendingPathComponent("cached").appendingPathExtension("webarchive")
         
-        webView = WKWebView(frame: webViewContainer.bounds)
-        webView.autoresizingMask = [.flexibleHeight]
-        webViewContainer.addSubview(webView)
+        webView = WKWebView()
         webView.navigationDelegate = self
+        webView.translatesAutoresizingMaskIntoConstraints = false
+        
+        webViewContainer.addSubview(webView)
+        webViewContainer.addConstraints([
+            webViewContainer.leadingAnchor.constraint(equalTo: webView.leadingAnchor),
+            webViewContainer.topAnchor.constraint(equalTo: webView.topAnchor),
+            webView.trailingAnchor.constraint(equalTo: webViewContainer.trailingAnchor),
+            webView.bottomAnchor.constraint(equalTo: webViewContainer.bottomAnchor)
+            ])
+        
         let request = URLRequest(url: homepageURL)
         webView.load(request)
     }
