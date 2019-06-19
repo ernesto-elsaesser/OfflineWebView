@@ -1,6 +1,6 @@
 # OfflineWebView
 
-This project contains following three targets:
+This project contains the following three targets:
 
 **WebArchiver**
 
@@ -10,7 +10,7 @@ The reusable framework that does the actual work. The main method `WebArchiver.a
 
 **OfflineWebView**
 
-This is just a very basic and quite ugly sample app that showcases how the `WebArchiver` can be used in combination with a `WKWebView`. It also shows how cookies can be extracted from the WebKit session to be used for archiving. Change the `homepageURL` in the view controller to test with your web page.
+This is just a very basic (and quite ugly) sample app that showcases how the `WebArchiver` can be used in combination with a `WKWebView`. It also shows how cookies can be extracted from the WebKit session to be used for archiving. Change the `homepageURL` in the view controller to test with your web page.
 
 **WebArchiverTests**
 
