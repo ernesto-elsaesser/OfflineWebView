@@ -4,7 +4,7 @@ This project contains the following three targets:
 
 **WebArchiver**
 
-The reusable framework that does the actual work. The main method `WebArchiver.achive(...)` takes an URL and optionally a list of cookies. The archiver will download the main HTML document and all linked HTML, CSS, JavaScript* and image resources. All resources are being stored in a single .webarchive file, which is just a binary PLIST using specific key names. There doesn't seem to be an official documentation of all supported keys, but it is possible to reconstruct the basic format from .webarchive files created by Safari. The archiver does parallelize resource requests, but works on a single serial queue.
+The reusable framework that does the actual work. The main method `WebArchiver.achive(...)` takes an URL and optionally a list of cookies. The archiver will download the main HTML document and all linked HTML, CSS, JavaScript* and image resources. All resources are then archived into a single .webarchive file (which is just a binary PLIST file). There doesn't seem to be an official documentation of the webarchive format, but it is possible to reconstruct the relevant key names from archive files created by Safari. The archiver does parallelize HTTP requests, but works on a single serial queue to process the responses.
 
 **JavaScript can be excluded if not wanted/needed*
 
