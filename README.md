@@ -4,13 +4,13 @@ This project contains the following three targets:
 
 **WebArchiver**
 
-The reusable framework that does the actual work. The main method `WebArchiver.achive(...)` takes an URL and optionally a list of cookies. The archiver will download the main HTML document and all linked HTML, CSS, JavaScript* and image resources. All resources are then archived into a single .webarchive file (which is just a binary PLIST file). There doesn't seem to be an official documentation of the webarchive format, but it is possible to reconstruct the relevant key names from archive files created by Safari. The archiver does parallelize HTTP requests, but works on a single serial queue to process the responses.
+The reusable framework that does the actual work. The main method `WebArchiver.achive(...)` takes a URL and optionally a list of cookies. The archiver will download the main HTML document and all linked HTML, CSS, JavaScript* and image resources. All resources are then packed into a single .webarchive file (which is just a binary PLIST file). There doesn't seem to be an official documentation of the webarchive format, but it is possible to reconstruct the relevant key names from archive files created by Safari. The archiver parallelizes HTTP requests, but works on a single serial queue to process the responses.
 
 **JavaScript can be excluded if not wanted/needed*
 
 **OfflineWebView**
 
-This is just a very basic (and quite ugly) sample app that showcases how the `WebArchiver` can be used in combination with a `WKWebView`. It also shows how cookies can be extracted from the WebKit session to be used for archiving. Change the `homepageURL` in the view controller to test with your web page.
+This is just a very basic (and quite ugly) sample app that showcases how the `WebArchiver` can be used in combination with a `WKWebView`. It also demonstrates how cookies extracted from the WebKit session can be used for archiving. Change the `homepageURL` in the view controller to test with your website of choice.
 
 **WebArchiverTests**
 
