@@ -3,271 +3,108 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E54EE05240ADCEF301F718C /* Pods_OfflineWebView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961165ACCD89680C452E3140 /* Pods_OfflineWebView.framework */; };
-		87DC114BED07C195F447F77D /* Pods_WebArchiverTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A692F1C8AC7C5E658786C8DC /* Pods_WebArchiverTests.framework */; };
-		884DF1958A6EAF8491E8E40D /* Pods_WebArchiver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C92A53B40A3BC72FB2FAD4B /* Pods_WebArchiver.framework */; };
-		94526A6D22B50436009012B9 /* ArchivingSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94526A6C22B50436009012B9 /* ArchivingSession.swift */; };
-		94E40EA42195C7CE002A130A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E40EA32195C7CE002A130A /* AppDelegate.swift */; };
-		94E40EA62195C7CE002A130A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E40EA52195C7CE002A130A /* ViewController.swift */; };
-		94E40EA92195C7CE002A130A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94E40EA72195C7CE002A130A /* Main.storyboard */; };
-		94E40EAB2195C7D0002A130A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94E40EAA2195C7D0002A130A /* Assets.xcassets */; };
-		94F965E821FFDA96008550FD /* WebArchiver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F965DF21FFDA96008550FD /* WebArchiver.framework */; };
-		94F965ED21FFDA96008550FD /* WebArchiverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F965EC21FFDA96008550FD /* WebArchiverTests.swift */; };
-		94F965EF21FFDA96008550FD /* WebArchiver.h in Headers */ = {isa = PBXBuildFile; fileRef = 94F965E121FFDA96008550FD /* WebArchiver.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		94F965F621FFDABC008550FD /* WebArchiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F46DF62197BF4B0025DE10 /* WebArchiver.swift */; };
-		94F965F721FFDABC008550FD /* WebArchive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F46DF821988BB80025DE10 /* WebArchive.swift */; };
+		9424EF192423CB58004E5C24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9424EF182423CB58004E5C24 /* AppDelegate.swift */; };
+		9424EF1B2423CB58004E5C24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9424EF1A2423CB58004E5C24 /* SceneDelegate.swift */; };
+		9424EF1D2423CB58004E5C24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9424EF1C2423CB58004E5C24 /* ViewController.swift */; };
+		9424EF202423CB58004E5C24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9424EF1E2423CB58004E5C24 /* Main.storyboard */; };
+		9424EF222423CB5B004E5C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9424EF212423CB5B004E5C24 /* Assets.xcassets */; };
+		945B40AF242B7BB50029C39E /* WebArchiver in Frameworks */ = {isa = PBXBuildFile; productRef = 945B40AE242B7BB50029C39E /* WebArchiver */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		94F965E921FFDA96008550FD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 94E40E982195C7CE002A130A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 94F965DE21FFDA96008550FD;
-			remoteInfo = WebArchiver;
-		};
-		94F965F821FFDB1C008550FD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 94E40E982195C7CE002A130A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 94F965DE21FFDA96008550FD;
-			remoteInfo = WebArchiver;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		2939E9241B9B946A6CE1FA8D /* Pods-OfflineWebView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfflineWebView.release.xcconfig"; path = "Pods/Target Support Files/Pods-OfflineWebView/Pods-OfflineWebView.release.xcconfig"; sourceTree = "<group>"; };
-		2975F646C35E0B77F535AACB /* Pods-WebArchiverTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebArchiverTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WebArchiverTests/Pods-WebArchiverTests.release.xcconfig"; sourceTree = "<group>"; };
-		2C92A53B40A3BC72FB2FAD4B /* Pods_WebArchiver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebArchiver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		65785B8563B6038C400A2B51 /* Pods-WebArchiverTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebArchiverTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WebArchiverTests/Pods-WebArchiverTests.debug.xcconfig"; sourceTree = "<group>"; };
-		94526A6C22B50436009012B9 /* ArchivingSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchivingSession.swift; sourceTree = "<group>"; };
-		94E40EA02195C7CE002A130A /* OfflineWebView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OfflineWebView.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		94E40EA32195C7CE002A130A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		94E40EA52195C7CE002A130A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		94E40EA82195C7CE002A130A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		94E40EAA2195C7D0002A130A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		94E40EAF2195C7D0002A130A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		94F46DF62197BF4B0025DE10 /* WebArchiver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebArchiver.swift; sourceTree = "<group>"; };
-		94F46DF821988BB80025DE10 /* WebArchive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebArchive.swift; sourceTree = "<group>"; };
-		94F965DF21FFDA96008550FD /* WebArchiver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WebArchiver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		94F965E121FFDA96008550FD /* WebArchiver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebArchiver.h; sourceTree = "<group>"; };
-		94F965E221FFDA96008550FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		94F965E721FFDA96008550FD /* WebArchiverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebArchiverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		94F965EC21FFDA96008550FD /* WebArchiverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebArchiverTests.swift; sourceTree = "<group>"; };
-		94F965EE21FFDA96008550FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		961165ACCD89680C452E3140 /* Pods_OfflineWebView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OfflineWebView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9CB2850921726849F0557A5F /* Pods-WebArchiver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebArchiver.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WebArchiver/Pods-WebArchiver.debug.xcconfig"; sourceTree = "<group>"; };
-		9FE785EFE60144FBF74FB5DD /* Pods-WebArchiver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebArchiver.release.xcconfig"; path = "Pods/Target Support Files/Pods-WebArchiver/Pods-WebArchiver.release.xcconfig"; sourceTree = "<group>"; };
-		A692F1C8AC7C5E658786C8DC /* Pods_WebArchiverTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebArchiverTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E2F1062490E57605B28FEC63 /* Pods-OfflineWebView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfflineWebView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OfflineWebView/Pods-OfflineWebView.debug.xcconfig"; sourceTree = "<group>"; };
+		9424EF152423CB58004E5C24 /* OfflineWebView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OfflineWebView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9424EF182423CB58004E5C24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9424EF1A2423CB58004E5C24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9424EF1C2423CB58004E5C24 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9424EF1F2423CB58004E5C24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9424EF212423CB5B004E5C24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9424EF262423CB5B004E5C24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		94E40E9D2195C7CE002A130A /* Frameworks */ = {
+		9424EF122423CB58004E5C24 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E54EE05240ADCEF301F718C /* Pods_OfflineWebView.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		94F965DC21FFDA96008550FD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				884DF1958A6EAF8491E8E40D /* Pods_WebArchiver.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		94F965E421FFDA96008550FD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				94F965E821FFDA96008550FD /* WebArchiver.framework in Frameworks */,
-				87DC114BED07C195F447F77D /* Pods_WebArchiverTests.framework in Frameworks */,
+				945B40AF242B7BB50029C39E /* WebArchiver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8931EBF3595335C4E6AC9E5D /* Frameworks */ = {
+		9424EF0C2423CB58004E5C24 = {
 			isa = PBXGroup;
 			children = (
-				961165ACCD89680C452E3140 /* Pods_OfflineWebView.framework */,
-				2C92A53B40A3BC72FB2FAD4B /* Pods_WebArchiver.framework */,
-				A692F1C8AC7C5E658786C8DC /* Pods_WebArchiverTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		94E40E972195C7CE002A130A = {
-			isa = PBXGroup;
-			children = (
-				94E40EA22195C7CE002A130A /* OfflineWebView */,
-				94F965E021FFDA96008550FD /* WebArchiver */,
-				94F965EB21FFDA96008550FD /* WebArchiverTests */,
-				94E40EA12195C7CE002A130A /* Products */,
-				8931EBF3595335C4E6AC9E5D /* Frameworks */,
-				FF5C96F7AC2817862D68FD48 /* Pods */,
+				9424EF172423CB58004E5C24 /* OfflineWebView */,
+				9424EF162423CB58004E5C24 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		94E40EA12195C7CE002A130A /* Products */ = {
+		9424EF162423CB58004E5C24 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				94E40EA02195C7CE002A130A /* OfflineWebView.app */,
-				94F965DF21FFDA96008550FD /* WebArchiver.framework */,
-				94F965E721FFDA96008550FD /* WebArchiverTests.xctest */,
+				9424EF152423CB58004E5C24 /* OfflineWebView.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		94E40EA22195C7CE002A130A /* OfflineWebView */ = {
+		9424EF172423CB58004E5C24 /* OfflineWebView */ = {
 			isa = PBXGroup;
 			children = (
-				94E40EA32195C7CE002A130A /* AppDelegate.swift */,
-				94E40EA52195C7CE002A130A /* ViewController.swift */,
-				94E40EA72195C7CE002A130A /* Main.storyboard */,
-				94E40EAA2195C7D0002A130A /* Assets.xcassets */,
-				94E40EAF2195C7D0002A130A /* Info.plist */,
+				9424EF182423CB58004E5C24 /* AppDelegate.swift */,
+				9424EF1A2423CB58004E5C24 /* SceneDelegate.swift */,
+				9424EF1C2423CB58004E5C24 /* ViewController.swift */,
+				9424EF1E2423CB58004E5C24 /* Main.storyboard */,
+				9424EF212423CB5B004E5C24 /* Assets.xcassets */,
+				9424EF262423CB5B004E5C24 /* Info.plist */,
 			);
 			path = OfflineWebView;
 			sourceTree = "<group>";
 		};
-		94F965E021FFDA96008550FD /* WebArchiver */ = {
-			isa = PBXGroup;
-			children = (
-				94F46DF821988BB80025DE10 /* WebArchive.swift */,
-				94F46DF62197BF4B0025DE10 /* WebArchiver.swift */,
-				94526A6C22B50436009012B9 /* ArchivingSession.swift */,
-				94F965E121FFDA96008550FD /* WebArchiver.h */,
-				94F965E221FFDA96008550FD /* Info.plist */,
-			);
-			path = WebArchiver;
-			sourceTree = "<group>";
-		};
-		94F965EB21FFDA96008550FD /* WebArchiverTests */ = {
-			isa = PBXGroup;
-			children = (
-				94F965EC21FFDA96008550FD /* WebArchiverTests.swift */,
-				94F965EE21FFDA96008550FD /* Info.plist */,
-			);
-			path = WebArchiverTests;
-			sourceTree = "<group>";
-		};
-		FF5C96F7AC2817862D68FD48 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E2F1062490E57605B28FEC63 /* Pods-OfflineWebView.debug.xcconfig */,
-				2939E9241B9B946A6CE1FA8D /* Pods-OfflineWebView.release.xcconfig */,
-				9CB2850921726849F0557A5F /* Pods-WebArchiver.debug.xcconfig */,
-				9FE785EFE60144FBF74FB5DD /* Pods-WebArchiver.release.xcconfig */,
-				65785B8563B6038C400A2B51 /* Pods-WebArchiverTests.debug.xcconfig */,
-				2975F646C35E0B77F535AACB /* Pods-WebArchiverTests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		94F965DA21FFDA96008550FD /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				94F965EF21FFDA96008550FD /* WebArchiver.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		94E40E9F2195C7CE002A130A /* OfflineWebView */ = {
+		9424EF142423CB58004E5C24 /* OfflineWebView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 94E40EB22195C7D0002A130A /* Build configuration list for PBXNativeTarget "OfflineWebView" */;
+			buildConfigurationList = 9424EF292423CB5B004E5C24 /* Build configuration list for PBXNativeTarget "OfflineWebView" */;
 			buildPhases = (
-				7F027B5FF70F3CB06AA409D4 /* [CP] Check Pods Manifest.lock */,
-				94E40E9C2195C7CE002A130A /* Sources */,
-				94E40E9D2195C7CE002A130A /* Frameworks */,
-				94E40E9E2195C7CE002A130A /* Resources */,
-				CD7151335420FAD814FBE05A /* [CP] Embed Pods Frameworks */,
+				9424EF112423CB58004E5C24 /* Sources */,
+				9424EF122423CB58004E5C24 /* Frameworks */,
+				9424EF132423CB58004E5C24 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				94F965F921FFDB1C008550FD /* PBXTargetDependency */,
 			);
 			name = OfflineWebView;
+			packageProductDependencies = (
+				945B40AE242B7BB50029C39E /* WebArchiver */,
+			);
 			productName = OfflineWebView;
-			productReference = 94E40EA02195C7CE002A130A /* OfflineWebView.app */;
+			productReference = 9424EF152423CB58004E5C24 /* OfflineWebView.app */;
 			productType = "com.apple.product-type.application";
-		};
-		94F965DE21FFDA96008550FD /* WebArchiver */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 94F965F421FFDA96008550FD /* Build configuration list for PBXNativeTarget "WebArchiver" */;
-			buildPhases = (
-				9D88B833C1FB48BD1A994D5D /* [CP] Check Pods Manifest.lock */,
-				94F965DA21FFDA96008550FD /* Headers */,
-				94F965DB21FFDA96008550FD /* Sources */,
-				94F965DC21FFDA96008550FD /* Frameworks */,
-				94F965DD21FFDA96008550FD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = WebArchiver;
-			productName = WebArchiver;
-			productReference = 94F965DF21FFDA96008550FD /* WebArchiver.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		94F965E621FFDA96008550FD /* WebArchiverTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 94F965F521FFDA96008550FD /* Build configuration list for PBXNativeTarget "WebArchiverTests" */;
-			buildPhases = (
-				CFCECDD61E13ED1A307C61B2 /* [CP] Check Pods Manifest.lock */,
-				94F965E321FFDA96008550FD /* Sources */,
-				94F965E421FFDA96008550FD /* Frameworks */,
-				94F965E521FFDA96008550FD /* Resources */,
-				D57D86B6A14D723ECFD36E90 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				94F965EA21FFDA96008550FD /* PBXTargetDependency */,
-			);
-			name = WebArchiverTests;
-			productName = WebArchiverTests;
-			productReference = 94F965E721FFDA96008550FD /* WebArchiverTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		94E40E982195C7CE002A130A /* Project object */ = {
+		9424EF0D2423CB58004E5C24 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
-				ORGANIZATIONNAME = "Ernesto Elsäßer";
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Ernesto Elsaesser";
 				TargetAttributes = {
-					94E40E9F2195C7CE002A130A = {
-						CreatedOnToolsVersion = 10.1;
-					};
-					94F965DE21FFDA96008550FD = {
-						CreatedOnToolsVersion = 10.1;
-					};
-					94F965E621FFDA96008550FD = {
-						CreatedOnToolsVersion = 10.1;
+					9424EF142423CB58004E5C24 = {
+						CreatedOnToolsVersion = 11.3.1;
 					};
 				};
 			};
-			buildConfigurationList = 94E40E9B2195C7CE002A130A /* Build configuration list for PBXProject "OfflineWebView" */;
+			buildConfigurationList = 9424EF102423CB58004E5C24 /* Build configuration list for PBXProject "OfflineWebView" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -275,183 +112,49 @@
 				en,
 				Base,
 			);
-			mainGroup = 94E40E972195C7CE002A130A;
-			productRefGroup = 94E40EA12195C7CE002A130A /* Products */;
+			mainGroup = 9424EF0C2423CB58004E5C24;
+			packageReferences = (
+				945B40AD242B7BB50029C39E /* XCRemoteSwiftPackageReference "WebArchiver" */,
+			);
+			productRefGroup = 9424EF162423CB58004E5C24 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				94E40E9F2195C7CE002A130A /* OfflineWebView */,
-				94F965DE21FFDA96008550FD /* WebArchiver */,
-				94F965E621FFDA96008550FD /* WebArchiverTests */,
+				9424EF142423CB58004E5C24 /* OfflineWebView */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		94E40E9E2195C7CE002A130A /* Resources */ = {
+		9424EF132423CB58004E5C24 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94E40EAB2195C7D0002A130A /* Assets.xcassets in Resources */,
-				94E40EA92195C7CE002A130A /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		94F965DD21FFDA96008550FD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		94F965E521FFDA96008550FD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				9424EF222423CB5B004E5C24 /* Assets.xcassets in Resources */,
+				9424EF202423CB58004E5C24 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		7F027B5FF70F3CB06AA409D4 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-OfflineWebView-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9D88B833C1FB48BD1A994D5D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WebArchiver-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CD7151335420FAD814FBE05A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-OfflineWebView/Pods-OfflineWebView-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-OfflineWebView/Pods-OfflineWebView-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OfflineWebView/Pods-OfflineWebView-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CFCECDD61E13ED1A307C61B2 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WebArchiverTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D57D86B6A14D723ECFD36E90 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WebArchiverTests/Pods-WebArchiverTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WebArchiverTests/Pods-WebArchiverTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WebArchiverTests/Pods-WebArchiverTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		94E40E9C2195C7CE002A130A /* Sources */ = {
+		9424EF112423CB58004E5C24 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94E40EA62195C7CE002A130A /* ViewController.swift in Sources */,
-				94E40EA42195C7CE002A130A /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		94F965DB21FFDA96008550FD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				94F965F621FFDABC008550FD /* WebArchiver.swift in Sources */,
-				94F965F721FFDABC008550FD /* WebArchive.swift in Sources */,
-				94526A6D22B50436009012B9 /* ArchivingSession.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		94F965E321FFDA96008550FD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				94F965ED21FFDA96008550FD /* WebArchiverTests.swift in Sources */,
+				9424EF1D2423CB58004E5C24 /* ViewController.swift in Sources */,
+				9424EF192423CB58004E5C24 /* AppDelegate.swift in Sources */,
+				9424EF1B2423CB58004E5C24 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		94F965EA21FFDA96008550FD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 94F965DE21FFDA96008550FD /* WebArchiver */;
-			targetProxy = 94F965E921FFDA96008550FD /* PBXContainerItemProxy */;
-		};
-		94F965F921FFDB1C008550FD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 94F965DE21FFDA96008550FD /* WebArchiver */;
-			targetProxy = 94F965F821FFDB1C008550FD /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		94E40EA72195C7CE002A130A /* Main.storyboard */ = {
+		9424EF1E2423CB58004E5C24 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				94E40EA82195C7CE002A130A /* Base */,
+				9424EF1F2423CB58004E5C24 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -459,7 +162,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		94E40EB02195C7D0002A130A /* Debug */ = {
+		9424EF272423CB5B004E5C24 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -491,7 +194,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -510,7 +212,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -520,7 +222,7 @@
 			};
 			name = Debug;
 		};
-		94E40EB12195C7D0002A130A /* Release */ = {
+		9424EF282423CB5B004E5C24 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -552,7 +254,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -565,7 +266,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -575,13 +276,11 @@
 			};
 			name = Release;
 		};
-		94E40EB32195C7D0002A130A /* Debug */ = {
+		9424EF2A2423CB5B004E5C24 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E2F1062490E57605B28FEC63 /* Pods-OfflineWebView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NS758RRF78;
 				INFOPLIST_FILE = OfflineWebView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -589,18 +288,16 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.elsaesser.OfflineWebView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		94E40EB42195C7D0002A130A /* Release */ = {
+		9424EF2B2423CB5B004E5C24 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2939E9241B9B946A6CE1FA8D /* Pods-OfflineWebView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NS758RRF78;
 				INFOPLIST_FILE = OfflineWebView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -608,109 +305,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.elsaesser.OfflineWebView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		94F965F021FFDA96008550FD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9CB2850921726849F0557A5F /* Pods-WebArchiver.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = NS758RRF78;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = WebArchiver/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.elsaesser.WebArchiver;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		94F965F121FFDA96008550FD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9FE785EFE60144FBF74FB5DD /* Pods-WebArchiver.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = NS758RRF78;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = WebArchiver/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.elsaesser.WebArchiver;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		94F965F221FFDA96008550FD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 65785B8563B6038C400A2B51 /* Pods-WebArchiverTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NS758RRF78;
-				INFOPLIST_FILE = WebArchiverTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.elsaesser.WebArchiverTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		94F965F321FFDA96008550FD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2975F646C35E0B77F535AACB /* Pods-WebArchiverTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NS758RRF78;
-				INFOPLIST_FILE = WebArchiverTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.elsaesser.WebArchiverTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -718,43 +313,44 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		94E40E9B2195C7CE002A130A /* Build configuration list for PBXProject "OfflineWebView" */ = {
+		9424EF102423CB58004E5C24 /* Build configuration list for PBXProject "OfflineWebView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				94E40EB02195C7D0002A130A /* Debug */,
-				94E40EB12195C7D0002A130A /* Release */,
+				9424EF272423CB5B004E5C24 /* Debug */,
+				9424EF282423CB5B004E5C24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		94E40EB22195C7D0002A130A /* Build configuration list for PBXNativeTarget "OfflineWebView" */ = {
+		9424EF292423CB5B004E5C24 /* Build configuration list for PBXNativeTarget "OfflineWebView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				94E40EB32195C7D0002A130A /* Debug */,
-				94E40EB42195C7D0002A130A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		94F965F421FFDA96008550FD /* Build configuration list for PBXNativeTarget "WebArchiver" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				94F965F021FFDA96008550FD /* Debug */,
-				94F965F121FFDA96008550FD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		94F965F521FFDA96008550FD /* Build configuration list for PBXNativeTarget "WebArchiverTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				94F965F221FFDA96008550FD /* Debug */,
-				94F965F321FFDA96008550FD /* Release */,
+				9424EF2A2423CB5B004E5C24 /* Debug */,
+				9424EF2B2423CB5B004E5C24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		945B40AD242B7BB50029C39E /* XCRemoteSwiftPackageReference "WebArchiver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ernesto-elsaesser/WebArchiver";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		945B40AE242B7BB50029C39E /* WebArchiver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 945B40AD242B7BB50029C39E /* XCRemoteSwiftPackageReference "WebArchiver" */;
+			productName = WebArchiver;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 94E40E982195C7CE002A130A /* Project object */;
+	rootObject = 9424EF0D2423CB58004E5C24 /* Project object */;
 }

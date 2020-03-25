@@ -52,12 +52,25 @@ class ViewController: UIViewController {
             return
         }
         
-        if #available(iOS 11.0, *) {
-            webView.configuration.websiteDataStore.httpCookieStore.getAllCookies { cookies in
-                self.exportArchive(url: url, cookies: cookies)
+        loadingView.isHidden = false
+        
+        webView.configuration.websiteDataStore.httpCookieStore.getAllCookies { cookies in
+            
+            WebArchiver.archive(url: url, cookies: cookies) { result in
+                
+                self.loadingView.isHidden = true
+                
+                if let data = result.plistData {
+                    do {
+                        try data.write(to: self.archiveURL)
+                        self.popup("Web page successfully archived!", isError: false)
+                    } catch {
+                        self.popup("Failed to write archive to disk!", isError: true)
+                    }
+                } else if let firstError = result.errors.first {
+                    self.popup(firstError.localizedDescription, isError: true)
+                }
             }
-        } else {
-            self.exportArchive(url: url)
         }
     }
     
@@ -69,27 +82,6 @@ class ViewController: UIViewController {
         }
         
         webView.loadFileURL(archiveURL, allowingReadAccessTo: archiveURL)
-    }
-
-    private func exportArchive(url: URL, cookies: [HTTPCookie] = []) {
-
-        loadingView.isHidden = false
-
-        WebArchiver.archive(url: url, cookies: cookies) { result in
-
-            self.loadingView.isHidden = true
-
-            if let data = result.plistData {
-                do {
-                    try data.write(to: self.archiveURL)
-                    self.popup("Web page successfully archived!", isError: false)
-                } catch {
-                    self.popup("Failed to write archive to disk!", isError: true)
-                }
-            } else if let firstError = result.errors.first {
-                self.popup(firstError.localizedDescription, isError: true)
-            }
-        }
     }
     
     private func popup(_ message: String, isError: Bool) {
