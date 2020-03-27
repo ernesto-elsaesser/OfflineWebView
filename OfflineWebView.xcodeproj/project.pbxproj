@@ -7,75 +7,89 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9424EF192423CB58004E5C24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9424EF182423CB58004E5C24 /* AppDelegate.swift */; };
-		9424EF1B2423CB58004E5C24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9424EF1A2423CB58004E5C24 /* SceneDelegate.swift */; };
-		9424EF1D2423CB58004E5C24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9424EF1C2423CB58004E5C24 /* ViewController.swift */; };
-		9424EF202423CB58004E5C24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9424EF1E2423CB58004E5C24 /* Main.storyboard */; };
-		9424EF222423CB5B004E5C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9424EF212423CB5B004E5C24 /* Assets.xcassets */; };
-		945B40AF242B7BB50029C39E /* WebArchiver in Frameworks */ = {isa = PBXBuildFile; productRef = 945B40AE242B7BB50029C39E /* WebArchiver */; };
+		940D1144242E0905006F7C27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940D1143242E0905006F7C27 /* AppDelegate.swift */; };
+		940D1146242E0906006F7C27 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940D1145242E0906006F7C27 /* SceneDelegate.swift */; };
+		940D1148242E0906006F7C27 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940D1147242E0906006F7C27 /* ContentView.swift */; };
+		940D114A242E090A006F7C27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 940D1149242E090A006F7C27 /* Assets.xcassets */; };
+		940D114D242E090A006F7C27 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 940D114C242E090A006F7C27 /* Preview Assets.xcassets */; };
+		940D1150242E090A006F7C27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 940D114E242E090A006F7C27 /* LaunchScreen.storyboard */; };
+		940D1159242E0978006F7C27 /* WebArchiver in Frameworks */ = {isa = PBXBuildFile; productRef = 940D1158242E0978006F7C27 /* WebArchiver */; };
+		940D115B242E099B006F7C27 /* UIViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940D115A242E099B006F7C27 /* UIViewWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9424EF152423CB58004E5C24 /* OfflineWebView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OfflineWebView.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9424EF182423CB58004E5C24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9424EF1A2423CB58004E5C24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9424EF1C2423CB58004E5C24 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9424EF1F2423CB58004E5C24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9424EF212423CB5B004E5C24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9424EF262423CB5B004E5C24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		940D1140242E0905006F7C27 /* OfflineWebView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OfflineWebView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		940D1143242E0905006F7C27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		940D1145242E0906006F7C27 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		940D1147242E0906006F7C27 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		940D1149242E090A006F7C27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		940D114C242E090A006F7C27 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		940D114F242E090A006F7C27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		940D1151242E090A006F7C27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		940D115A242E099B006F7C27 /* UIViewWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9424EF122423CB58004E5C24 /* Frameworks */ = {
+		940D113D242E0905006F7C27 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				945B40AF242B7BB50029C39E /* WebArchiver in Frameworks */,
+				940D1159242E0978006F7C27 /* WebArchiver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9424EF0C2423CB58004E5C24 = {
+		940D1137242E0905006F7C27 = {
 			isa = PBXGroup;
 			children = (
-				9424EF172423CB58004E5C24 /* OfflineWebView */,
-				9424EF162423CB58004E5C24 /* Products */,
+				940D1142242E0905006F7C27 /* OfflineWebView */,
+				940D1141242E0905006F7C27 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		9424EF162423CB58004E5C24 /* Products */ = {
+		940D1141242E0905006F7C27 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9424EF152423CB58004E5C24 /* OfflineWebView.app */,
+				940D1140242E0905006F7C27 /* OfflineWebView.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9424EF172423CB58004E5C24 /* OfflineWebView */ = {
+		940D1142242E0905006F7C27 /* OfflineWebView */ = {
 			isa = PBXGroup;
 			children = (
-				9424EF182423CB58004E5C24 /* AppDelegate.swift */,
-				9424EF1A2423CB58004E5C24 /* SceneDelegate.swift */,
-				9424EF1C2423CB58004E5C24 /* ViewController.swift */,
-				9424EF1E2423CB58004E5C24 /* Main.storyboard */,
-				9424EF212423CB5B004E5C24 /* Assets.xcassets */,
-				9424EF262423CB5B004E5C24 /* Info.plist */,
+				940D1143242E0905006F7C27 /* AppDelegate.swift */,
+				940D1145242E0906006F7C27 /* SceneDelegate.swift */,
+				940D1147242E0906006F7C27 /* ContentView.swift */,
+				940D115A242E099B006F7C27 /* UIViewWrapper.swift */,
+				940D1149242E090A006F7C27 /* Assets.xcassets */,
+				940D114E242E090A006F7C27 /* LaunchScreen.storyboard */,
+				940D1151242E090A006F7C27 /* Info.plist */,
+				940D114B242E090A006F7C27 /* Preview Content */,
 			);
 			path = OfflineWebView;
+			sourceTree = "<group>";
+		};
+		940D114B242E090A006F7C27 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				940D114C242E090A006F7C27 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9424EF142423CB58004E5C24 /* OfflineWebView */ = {
+		940D113F242E0905006F7C27 /* OfflineWebView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9424EF292423CB5B004E5C24 /* Build configuration list for PBXNativeTarget "OfflineWebView" */;
+			buildConfigurationList = 940D1154242E090A006F7C27 /* Build configuration list for PBXNativeTarget "OfflineWebView" */;
 			buildPhases = (
-				9424EF112423CB58004E5C24 /* Sources */,
-				9424EF122423CB58004E5C24 /* Frameworks */,
-				9424EF132423CB58004E5C24 /* Resources */,
+				940D113C242E0905006F7C27 /* Sources */,
+				940D113D242E0905006F7C27 /* Frameworks */,
+				940D113E242E0905006F7C27 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -83,28 +97,28 @@
 			);
 			name = OfflineWebView;
 			packageProductDependencies = (
-				945B40AE242B7BB50029C39E /* WebArchiver */,
+				940D1158242E0978006F7C27 /* WebArchiver */,
 			);
 			productName = OfflineWebView;
-			productReference = 9424EF152423CB58004E5C24 /* OfflineWebView.app */;
+			productReference = 940D1140242E0905006F7C27 /* OfflineWebView.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		9424EF0D2423CB58004E5C24 /* Project object */ = {
+		940D1138242E0905006F7C27 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Ernesto Elsaesser";
 				TargetAttributes = {
-					9424EF142423CB58004E5C24 = {
-						CreatedOnToolsVersion = 11.3.1;
+					940D113F242E0905006F7C27 = {
+						CreatedOnToolsVersion = 11.4;
 					};
 				};
 			};
-			buildConfigurationList = 9424EF102423CB58004E5C24 /* Build configuration list for PBXProject "OfflineWebView" */;
+			buildConfigurationList = 940D113B242E0905006F7C27 /* Build configuration list for PBXProject "OfflineWebView" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -112,57 +126,59 @@
 				en,
 				Base,
 			);
-			mainGroup = 9424EF0C2423CB58004E5C24;
+			mainGroup = 940D1137242E0905006F7C27;
 			packageReferences = (
-				945B40AD242B7BB50029C39E /* XCRemoteSwiftPackageReference "WebArchiver" */,
+				940D1157242E0978006F7C27 /* XCRemoteSwiftPackageReference "WebArchiver" */,
 			);
-			productRefGroup = 9424EF162423CB58004E5C24 /* Products */;
+			productRefGroup = 940D1141242E0905006F7C27 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9424EF142423CB58004E5C24 /* OfflineWebView */,
+				940D113F242E0905006F7C27 /* OfflineWebView */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9424EF132423CB58004E5C24 /* Resources */ = {
+		940D113E242E0905006F7C27 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9424EF222423CB5B004E5C24 /* Assets.xcassets in Resources */,
-				9424EF202423CB58004E5C24 /* Main.storyboard in Resources */,
+				940D1150242E090A006F7C27 /* LaunchScreen.storyboard in Resources */,
+				940D114D242E090A006F7C27 /* Preview Assets.xcassets in Resources */,
+				940D114A242E090A006F7C27 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9424EF112423CB58004E5C24 /* Sources */ = {
+		940D113C242E0905006F7C27 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9424EF1D2423CB58004E5C24 /* ViewController.swift in Sources */,
-				9424EF192423CB58004E5C24 /* AppDelegate.swift in Sources */,
-				9424EF1B2423CB58004E5C24 /* SceneDelegate.swift in Sources */,
+				940D115B242E099B006F7C27 /* UIViewWrapper.swift in Sources */,
+				940D1144242E0905006F7C27 /* AppDelegate.swift in Sources */,
+				940D1146242E0906006F7C27 /* SceneDelegate.swift in Sources */,
+				940D1148242E0906006F7C27 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9424EF1E2423CB58004E5C24 /* Main.storyboard */ = {
+		940D114E242E090A006F7C27 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9424EF1F2423CB58004E5C24 /* Base */,
+				940D114F242E090A006F7C27 /* Base */,
 			);
-			name = Main.storyboard;
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		9424EF272423CB5B004E5C24 /* Debug */ = {
+		940D1152242E090A006F7C27 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -212,7 +228,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -222,7 +238,7 @@
 			};
 			name = Debug;
 		};
-		9424EF282423CB5B004E5C24 /* Release */ = {
+		940D1153242E090A006F7C27 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -266,7 +282,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -276,11 +292,13 @@
 			};
 			name = Release;
 		};
-		9424EF2A2423CB5B004E5C24 /* Debug */ = {
+		940D1155242E090A006F7C27 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"OfflineWebView/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = OfflineWebView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -293,11 +311,13 @@
 			};
 			name = Debug;
 		};
-		9424EF2B2423CB5B004E5C24 /* Release */ = {
+		940D1156242E090A006F7C27 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"OfflineWebView/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = OfflineWebView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -313,20 +333,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9424EF102423CB58004E5C24 /* Build configuration list for PBXProject "OfflineWebView" */ = {
+		940D113B242E0905006F7C27 /* Build configuration list for PBXProject "OfflineWebView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9424EF272423CB5B004E5C24 /* Debug */,
-				9424EF282423CB5B004E5C24 /* Release */,
+				940D1152242E090A006F7C27 /* Debug */,
+				940D1153242E090A006F7C27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9424EF292423CB5B004E5C24 /* Build configuration list for PBXNativeTarget "OfflineWebView" */ = {
+		940D1154242E090A006F7C27 /* Build configuration list for PBXNativeTarget "OfflineWebView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9424EF2A2423CB5B004E5C24 /* Debug */,
-				9424EF2B2423CB5B004E5C24 /* Release */,
+				940D1155242E090A006F7C27 /* Debug */,
+				940D1156242E090A006F7C27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -334,7 +354,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		945B40AD242B7BB50029C39E /* XCRemoteSwiftPackageReference "WebArchiver" */ = {
+		940D1157242E0978006F7C27 /* XCRemoteSwiftPackageReference "WebArchiver" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ernesto-elsaesser/WebArchiver";
 			requirement = {
@@ -345,12 +365,12 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		945B40AE242B7BB50029C39E /* WebArchiver */ = {
+		940D1158242E0978006F7C27 /* WebArchiver */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 945B40AD242B7BB50029C39E /* XCRemoteSwiftPackageReference "WebArchiver" */;
+			package = 940D1157242E0978006F7C27 /* XCRemoteSwiftPackageReference "WebArchiver" */;
 			productName = WebArchiver;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 9424EF0D2423CB58004E5C24 /* Project object */;
+	rootObject = 940D1138242E0905006F7C27 /* Project object */;
 }
