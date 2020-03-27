@@ -21,10 +21,23 @@ struct ContentView: View {
         }
     }
     
-    struct Popup: Identifiable {
-        let message: String
-        let isError: Bool
-        var id: String { return message } // hack
+    enum Popup: Identifiable {
+        case archiveCreated
+        case achivingFailed(error: Error)
+        case noArchive
+        
+        var id: String { return self.message } // hack
+        
+        var message: String {
+            switch self {
+            case .archiveCreated:
+                return "Web page stored offline."
+            case .achivingFailed(let error):
+                return "Error: " + error.localizedDescription
+            case .noArchive:
+                return "Nothing archived yet!"
+            }
+        }
     }
     
     let archiveURL: URL
@@ -67,11 +80,7 @@ struct ContentView: View {
                 }
             }.padding().frame(height:40.0).background(Color(white:0.9))
         }.alert(item: $popup) { p in
-            Alert(
-                title: Text(p.isError ? "Error" : "Success"),
-                message: Text(p.message),
-                dismissButton: .default(Text("OK"))
-            )
+            Alert(title: Text(p.message))
         }
     }
     
@@ -90,21 +99,18 @@ struct ContentView: View {
             
             WebArchiver.archive(url: url, cookies: cookies) { result in
                 
-                self.toolbar.loading = false
-                
-                var err: Error? = nil
                 if let data = result.plistData {
                     do {
                         try data.write(to: self.archiveURL)
+                        self.popup = .archiveCreated
                     } catch {
-                        err = error
+                        self.popup = .achivingFailed(error: error)
                     }
-                } else {
-                    err = result.errors.first
+                } else if let firstError = result.errors.first {
+                    self.popup = .achivingFailed(error: firstError)
                 }
                 
-                self.popup = Popup(message: err?.localizedDescription ?? "Web page stored offline.",
-                                   isError: err != nil)
+                self.toolbar.loading = false
             }
         }
     }
@@ -113,7 +119,7 @@ struct ContentView: View {
         if FileManager.default.fileExists(atPath: archiveURL.path) {
             webView.loadFileURL(archiveURL, allowingReadAccessTo: archiveURL)
         } else {
-            self.popup = Popup(message: "Nothing archived yet!", isError: true)
+            self.popup = .noArchive
         }
     }
 }
