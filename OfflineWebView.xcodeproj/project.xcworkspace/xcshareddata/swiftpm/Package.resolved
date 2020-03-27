@@ -5,18 +5,18 @@
         "package": "Fuzi",
         "repositoryURL": "https://github.com/cezheng/Fuzi",
         "state": {
-          "branch": "master",
-          "revision": "64afdf8003f8e1b730868b6f5453a6a7149aff9e",
-          "version": null
+          "branch": null,
+          "revision": "5955a7d9b3bb5f24adb1a46ce8586ba37eee43bc",
+          "version": "3.1.2"
         }
       },
       {
         "package": "WebArchiver",
         "repositoryURL": "https://github.com/ernesto-elsaesser/WebArchiver",
         "state": {
-          "branch": "master",
-          "revision": "81f7febffdd283281847d904f7eddcb2725eaee5",
-          "version": null
+          "branch": null,
+          "revision": "4c6dbbeb584cfc3b738c58b23871b5f7c23dabda",
+          "version": "1.0.0"
         }
       }
     ]
