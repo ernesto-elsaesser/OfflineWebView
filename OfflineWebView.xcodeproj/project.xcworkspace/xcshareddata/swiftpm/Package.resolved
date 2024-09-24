@@ -1,25 +1,15 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "Fuzi",
-        "repositoryURL": "https://github.com/cezheng/Fuzi",
-        "state": {
-          "branch": null,
-          "revision": "5955a7d9b3bb5f24adb1a46ce8586ba37eee43bc",
-          "version": "3.1.2"
-        }
-      },
-      {
-        "package": "WebArchiver",
-        "repositoryURL": "https://github.com/ernesto-elsaesser/WebArchiver",
-        "state": {
-          "branch": null,
-          "revision": "208e0807fda0d17e11687200bd18007ac41c9ddc",
-          "version": "1.0.1"
-        }
+  "originHash" : "9013b66b3e05120bfaa9b54a69fa343937092458499ec0378bc6ac7a87dce33d",
+  "pins" : [
+    {
+      "identity" : "webarchiver",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ernesto-elsaesser/WebArchiver",
+      "state" : {
+        "revision" : "977e347be9b1fbda3aa0db889c3c6035f7bf0ca9",
+        "version" : "1.1.0"
       }
-    ]
-  },
-  "version": 1
+    }
+  ],
+  "version" : 3
 }

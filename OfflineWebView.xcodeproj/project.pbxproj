@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,7 +14,7 @@
 		940D114D242E090A006F7C27 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 940D114C242E090A006F7C27 /* Preview Assets.xcassets */; };
 		940D1150242E090A006F7C27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 940D114E242E090A006F7C27 /* LaunchScreen.storyboard */; };
 		940D115B242E099B006F7C27 /* UIViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940D115A242E099B006F7C27 /* UIViewWrapper.swift */; };
-		940D115E242E87E4006F7C27 /* WebArchiver in Frameworks */ = {isa = PBXBuildFile; productRef = 940D115D242E87E4006F7C27 /* WebArchiver */; };
+		943B0AD72CA2FB9800BFDEB1 /* WebArchiver in Frameworks */ = {isa = PBXBuildFile; productRef = 943B0AD62CA2FB9800BFDEB1 /* WebArchiver */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				940D115E242E87E4006F7C27 /* WebArchiver in Frameworks */,
+				943B0AD72CA2FB9800BFDEB1 /* WebArchiver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +97,7 @@
 			);
 			name = OfflineWebView;
 			packageProductDependencies = (
-				940D115D242E87E4006F7C27 /* WebArchiver */,
+				943B0AD62CA2FB9800BFDEB1 /* WebArchiver */,
 			);
 			productName = OfflineWebView;
 			productReference = 940D1140242E0905006F7C27 /* OfflineWebView.app */;
@@ -128,7 +128,7 @@
 			);
 			mainGroup = 940D1137242E0905006F7C27;
 			packageReferences = (
-				940D115C242E87E4006F7C27 /* XCRemoteSwiftPackageReference "WebArchiver" */,
+				943B0AD52CA2FB9800BFDEB1 /* XCRemoteSwiftPackageReference "WebArchiver" */,
 			);
 			productRefGroup = 940D1141242E0905006F7C27 /* Products */;
 			projectDirPath = "";
@@ -354,20 +354,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		940D115C242E87E4006F7C27 /* XCRemoteSwiftPackageReference "WebArchiver" */ = {
+		943B0AD52CA2FB9800BFDEB1 /* XCRemoteSwiftPackageReference "WebArchiver" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ernesto-elsaesser/WebArchiver";
 			requirement = {
-				kind = exactVersion;
-				version = 1.0.1;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		940D115D242E87E4006F7C27 /* WebArchiver */ = {
+		943B0AD62CA2FB9800BFDEB1 /* WebArchiver */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 940D115C242E87E4006F7C27 /* XCRemoteSwiftPackageReference "WebArchiver" */;
+			package = 943B0AD52CA2FB9800BFDEB1 /* XCRemoteSwiftPackageReference "WebArchiver" */;
 			productName = WebArchiver;
 		};
 /* End XCSwiftPackageProductDependency section */
